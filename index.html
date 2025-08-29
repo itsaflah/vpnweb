@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CreaVPN — Clone</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons (optional) -->
+  <script src="https://kit.fontawesome.com/a2d9b3f9b0.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav sticky">
+    <div class="container nav-inner">
+      <div class="brand">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden><circle cx="12" cy="12" r="10" fill="#ffffff10"/><path d="M6 12a6 6 0 1012 0" stroke="white" stroke-width="1.2" fill="none"/></svg>
+        <span class="brand-text">CreaVPN</span>
+      </div>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About Us</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">Articles</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn" href="#cta">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="home" role="region" aria-label="Hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="badge">CreaVPN version 2.0 is available</div>
+          <h1>Fast, Reliable, & Secure<br/>VPN for Every Device</h1>
+          <p class="lead">Enjoy uninterrupted browsing, streaming, and gaming with industry-leading security and blazing-fast connections on every platform only with CreaVPN.</p>
+          <div class="hero-actions">
+            <a class="btn large" href="#download">Download CreaVPN</a>
+          </div>
+        </div>
+
+        <!-- VPN Dashboard (centerpiece) -->
+        <div class="dashboard-wrap">
+          <div class="server-card left-card card-shadow">
+            <div class="flag-wrap"><img src="https://flagcdn.com/w80/tr.png" alt="Turkey flag" /></div>
+            <div class="server-info">
+              <div class="server-name">Istanbul, Turkey</div>
+              <div class="coords">24.9420,20.32</div>
+            </div>
+            <div class="status available">Available</div>
+          </div>
+
+          <div class="server-main card-glow card-shadow">
+            <div class="server-top">
+              <div class="logo-small">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden><path d="M12 2l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#fff"/></svg>
+                <span>CreaVPN <span class="connected-dot connected">Connected</span></span>
+              </div>
+              <div class="timer" id="timer">00:58:26</div>
+            </div>
+
+            <div class="location-row">
+              <div class="loc-flag"><img src="https://flagcdn.com/w40/gb.png" alt="UK" /></div>
+              <div class="loc-details">
+                <div class="loc-name">London, UK</div>
+                <div class="loc-meta">32.9992,90.12 • <span class="ping">Ping: <strong id="ping">10 ms</strong></span></div>
+              </div>
+            </div>
+
+            <div class="speed-row">
+              <div class="speed-item">
+                <div class="speed-num" id="download">32</div>
+                <div class="speed-label">Downloaded <small>Mb/s</small></div>
+              </div>
+              <div class="speed-item">
+                <div class="speed-num" id="upload">24</div>
+                <div class="speed-label">Uploaded <small>Mb/s</small></div>
+              </div>
+            </div>
+
+            <button id="powerBtn" class="power-btn" aria-pressed="false" title="Connect / Disconnect">
+              <span class="power-icon"><i class="fa-solid fa-power-off"></i></span>
+            </button>
+          </div>
+
+          <div class="server-card right-card card-shadow">
+            <div class="flag-wrap"><img src="https://flagcdn.com/w80/id.png" alt="Indonesia flag" /></div>
+            <div class="server-info">
+              <div class="server-name">Jakarta, Indonesia</div>
+              <div class="coords">54.3421,94.82</div>
+            </div>
+            <div class="status available">Available</div>
+          </div>
+        </div>
+
+        <div class="trusted">
+          <div class="trusted-text">Trusted by</div>
+          <div class="trusted-logos">
+            <div class="logo-pill">Logoipsum</div>
+            <div class="logo-pill">Logoipsum</div>
+            <div class="logo-pill">Logoipsum</div>
+            <div class="logo-pill">Logoipsum</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features container" role="region" aria-label="Features">
+      <h2>Your Partner for Secure Browsing</h2>
+      <p class="muted">Stay protected with our top-tier encryption and privacy features.</p>
+
+      <div class="features-grid">
+        <article class="feature card-shadow reveal">
+          <div class="icon-box"><i class="fa-solid fa-lock"></i></div>
+          <h3>Military-Grade Encryption</h3>
+          <p>Your data is safe with us. We use industry-leading encryption standards to ensure your personal information remains private.</p>
+        </article>
+
+        <article class="feature card-shadow reveal">
+          <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Lightning-Fast Speeds</h3>
+          <p>No slowdowns here. Enjoy smooth, uninterrupted browsing, streaming, and gaming without compromising your security.</p>
+        </article>
+
+        <article class="feature card-shadow reveal">
+          <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
+          <h3>Global Server Network</h3>
+          <p>Access content from anywhere with our vast network of servers around the world. No matter where you are, we've got you covered.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats container reveal">
+      <div class="stat">
+        <div class="big">99.9%</div>
+        <div class="label">Average Uptime</div>
+      </div>
+      <div class="stat">
+        <div class="big">50+</div>
+        <div class="label">Countries Covered</div>
+      </div>
+      <div class="stat">
+        <div class="big">10M+</div>
+        <div class="label">Users Worldwide</div>
+      </div>
+    </section>
+
+    <!-- MAP / GLOBE (placeholder) -->
+    <section class="map container reveal" aria-label="Global Network">
+      <h2>Secure Access Across 50+ Countries at Your Fingertips</h2>
+      <p class="muted">Unlock global content and protect your privacy with our vast server network</p>
+
+      <div class="globe-wrap">
+        <!-- For pixel-perfect the screenshot shows a stylized globe.
+             You can replace this background with an exported image or svg exactly like screenshot. -->
+        <img class="globe" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=3e5d9fdf79b7df7f87b30fa7cfb074d1" alt="globe placeholder" />
+        <div class="map-bubble" style="--x:30%;--y:30%"><span class="flag"><img src="https://flagcdn.com/w40/pt.png" alt=""></span> Portugal <small>71 servers</small></div>
+        <div class="map-bubble" style="--x:45%;--y:22%"><span class="flag"><img src="https://flagcdn.com/w40/us.png" alt=""></span> USA <small>29 servers</small></div>
+        <div class="map-bubble" style="--x:60%;--y:30%"><span class="flag"><img src="https://flagcdn.com/w40/id.png" alt=""></span> Indonesia <small>40 servers</small></div>
+        <div class="map-bubble" style="--x:18%;--y:16%"><span class="flag"><img src="https://flagcdn.com/w40/ru.png" alt=""></span> Russia <small>37 servers</small></div>
+        <div class="map-bubble" style="--x:70%;--y:12%"><span class="flag"><img src="https://flagcdn.com/w40/my.png" alt=""></span> Malaysia <small>12 servers</small></div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="pricing container reveal" aria-label="Pricing">
+      <h2>Premium Features, Budget-Friendly Pricing</h2>
+      <p class="muted">Get the highest level of protection and privacy at a price that suits you.</p>
+
+      <div class="plans">
+        <div class="plan card-shadow">
+          <h3>Basic Plan</h3>
+          <div class="price"><span class="currency">$</span>5 <small>/ month</small></div>
+          <ul class="features-list">
+            <li>AES-256 bit encryption</li>
+            <li>No-logs policy</li>
+            <li>Global server access in 50+ countries</li>
+            <li>Kill switch for extra protection</li>
+            <li>DNS leak protection</li>
+          </ul>
+          <button class="btn small choose">Choose This Plan</button>
+        </div>
+
+        <div class="plan highlight card-shadow">
+          <div class="badge-plan">Popular</div>
+          <h3>Standard Plan</h3>
+          <div class="price"><span class="currency">$</span>8 <small>/ month</small></div>
+          <ul class="features-list">
+            <li>AES-256 bit encryption</li>
+            <li>No-logs policy</li>
+            <li>Global server access in 50+ countries</li>
+            <li>Kill switch for extra protection</li>
+            <li>Ad and tracker blocking</li>
+            <li>Dedicated IP option</li>
+          </ul>
+          <button class="btn small choose">Choose This Plan</button>
+        </div>
+
+        <div class="plan card-shadow">
+          <h3>Personal Plan</h3>
+          <div class="price"><span class="currency">$</span>12 <small>/ month</small></div>
+          <ul class="features-list">
+            <li>AES-256 bit encryption</li>
+            <li>No-logs policy</li>
+            <li>Global server access in 50+ countries</li>
+            <li>Unlimited bandwidth</li>
+            <li>Malware & phishing protection</li>
+          </ul>
+          <button class="btn small choose">Choose This Plan</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq container reveal" aria-label="FAQ">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-left">
+          <p class="muted">Have another question? Please contact our team!</p>
+          <a class="btn small" href="#contact">Contact Our Team</a>
+        </div>
+
+        <div class="faq-right">
+          <div class="accordion" role="tablist">
+            <div class="acc-item" data-acc>
+              <button class="acc-btn" aria-expanded="true">How does CreaVPN work?</button>
+              <div class="acc-panel">CreaVPN encrypts your internet connection and routes your data through our secure servers, masking your IP address and preventing anyone from tracking your online activities.</div>
+            </div>
+
+            <div class="acc-item" data-acc>
+              <button class="acc-btn" aria-expanded="false">Is CreaVPN easy to use?</button>
+              <div class="acc-panel">Yes. It is designed to be simple with one-click connect across platforms.</div>
+            </div>
+
+            <div class="acc-item" data-acc>
+              <button class="acc-btn" aria-expanded="false">Can I use CreaVPN on multiple devices?</button>
+              <div class="acc-panel">Yes — a single subscription supports multiple simultaneous devices depending on your plan.</div>
+            </div>
+
+            <div class="acc-item" data-acc>
+              <button class="acc-btn" aria-expanded="false">What kind of encryption does CreaVPN use?</button>
+              <div class="acc-panel">We use AES-256 encryption with modern TLS handshakes and secure key exchange.</div>
+            </div>
+
+            <div class="acc-item" data-acc>
+              <button class="acc-btn" aria-expanded="false">In how many countries is CreaVPN available?</button>
+              <div class="acc-panel">CreaVPN operates servers in 50+ countries worldwide.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="cta container reveal" aria-label="Call to action">
+      <div class="cta-inner">
+        <div>
+          <h2>Experience Ultimate Online Protection</h2>
+          <p class="muted">Stay safe online with our advanced VPN technology, designed to protect your data and privacy no matter where you are.</p>
+        </div>
+        <div>
+          <a class="btn large" href="#download">14-day Free Trial</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand small"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden><circle cx="12" cy="12" r="10" fill="#ffffff10"/></svg><span>CreaVPN</span></div>
+        <p class="muted">© CreaVPN 2024</p>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <ul><li>Our Mission</li><li>Our Vision</li><li>Our Story</li><li>Meet Our Team</li></ul>
+      </div>
+
+      <div>
+        <h4>Products</h4>
+        <ul><li>VPN for Windows</li><li>VPN for macOS</li><li>VPN for iOS</li><li>VPN for Android</li></ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p class="muted">1341 Poplar Street, Chicago, IL 60606<br/>(725) 712-6532<br/>hello@creavpn.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
